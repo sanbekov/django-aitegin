@@ -17,3 +17,13 @@ class Post(models.Model):
     date = models.DateField(auto_now_add=True, blank=True, null=True)
     stars = models.IntegerField(null=True)
     type = models.IntegerField(choices=POST_TYPE_CHOICES, null=True)
+
+
+
+class Comment(models.Model):
+    Nickname = models.CharField(max_length=15)
+    commentary = models.TextField()
+    username = models.CharField(max_length=30)
+    date = models.DateField( auto_now_add=True, blank=True,  null=True)
+    stars = models.IntegerField(null=True)
+
